@@ -1,0 +1,22 @@
+{
+  "result": [
+    {
+      "dictId": "DICT0001",
+      "dictCodeKbn": "USE",
+      "dictCode": "1",
+      "dictLnm": "启用",
+      "dictRnm": "启用",
+      "sortNo": 8
+    },
+    {
+      "dictId": "DICT0002",
+      "dictCodeKbn": "STOP",
+      "dictCode": "0",
+      "dictLnm": "停用",
+      "dictRnm": "停用",
+      "sortNo": 9
+    }
+  ],
+  "resultCode": "200",
+  "resultMsg": "处理成功"
+}

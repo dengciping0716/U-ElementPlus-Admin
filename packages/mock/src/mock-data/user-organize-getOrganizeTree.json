@@ -1,0 +1,25 @@
+{
+  "result": [
+    {
+      "organizeId": "224c6026-05a8-11ee-a7aa-0242ac130002",
+      "organizeCode": "001",
+      "organizeName": "xxx股份有限公司",
+      "listOrganize": [
+        {
+          "organizeId": "12d2a39a1d3dd50cc4030773e9df3653",
+          "organizeCode": "001.000",
+          "organizeName": "技术中心",
+          "listOrganize": []
+        },
+        {
+          "organizeId": "a4eaad6a1b5fc214b9f252ca9c513558",
+          "organizeCode": "001.001",
+          "organizeName": "行政部门",
+          "listOrganize": []
+        }
+      ]
+    }
+  ],
+  "resultCode": "200",
+  "resultMsg": "处理成功"
+}

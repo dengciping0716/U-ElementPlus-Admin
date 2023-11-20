@@ -1,0 +1,25 @@
+@use 'element-plus/theme-chalk/src/mixins/mixins.scss' as *;
+
+.el-dialog {
+  .el-card {
+    border: none;
+  }
+  .el-card__body {
+    padding: 0;
+  }
+}
+
+.el-tree {
+  .el-tree-node__content {
+    height: unset;
+  }
+}
+
+.el-drawer__header {
+  margin-bottom: 10px;
+  color: getCssVar('text-color', 'primary');
+  font-weight: 600;
+}
+.el-drawer__body {
+  border-top: 1px solid getCssVar('border-color');
+}

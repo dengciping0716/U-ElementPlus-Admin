@@ -1,0 +1,98 @@
+{
+  "result": [
+    {
+      "organizeId": "224c6026-05a8-11ee-a7aa-0242ac130002",
+      "organizeName": "xxx股份有限公司",
+      "listOrganize": [
+        {
+          "organizeId": "12d2a39a1d3dd50cc4030773e9df3653",
+          "organizeCode": "001.000",
+          "organizeName": "技术中心",
+          "listOrganize": [],
+          "listEmp": [
+            {
+              "empId": "1671338097429155842",
+              "empName": "田峰2",
+              "telephone": "13816873941"
+            },
+            {
+              "empId": "1674708870197833729",
+              "empName": "孙悟空",
+              "telephone": "13801010102"
+            },
+            {
+              "empId": "1676131330241200130",
+              "empName": "xiaojiang",
+              "telephone": "15116224109"
+            },
+            {
+              "empId": "1678237705163382786",
+              "empName": "testUser1",
+              "telephone": "15116224108"
+            },
+            {
+              "empId": "EMP0002",
+              "empName": "admin",
+              "telephone": "13701010101"
+            },
+            {
+              "empId": "1714196767517446145",
+              "empName": "罗双龙",
+              "telephone": "13089404941"
+            },
+            {
+              "empId": "1714831676057587713",
+              "empName": "廖神",
+              "telephone": "15153154541"
+            }
+          ]
+        },
+        {
+          "organizeId": "a4eaad6a1b5fc214b9f252ca9c513558",
+          "organizeCode": "001.001",
+          "organizeName": "行政部门",
+          "listOrganize": []
+        }
+      ],
+      "listEmp": [
+        {
+          "empId": "1671338097429155842",
+          "empName": "田峰2",
+          "telephone": "13816873941"
+        },
+        {
+          "empId": "1674708870197833729",
+          "empName": "孙悟空",
+          "telephone": "13801010102"
+        },
+        {
+          "empId": "1676131330241200130",
+          "empName": "xiaojiang",
+          "telephone": "15116224109"
+        },
+        {
+          "empId": "1678237705163382786",
+          "empName": "testUser1",
+          "telephone": "15116224108"
+        },
+        {
+          "empId": "1714196767517446145",
+          "empName": "罗双龙",
+          "telephone": "13089404941"
+        },
+        {
+          "empId": "1714831676057587713",
+          "empName": "廖神",
+          "telephone": "15153154541"
+        },
+        {
+          "empId": "EMP0002",
+          "empName": "admin",
+          "telephone": "13701010101"
+        }
+      ]
+    }
+  ],
+  "resultCode": "200",
+  "resultMsg": "处理成功"
+}

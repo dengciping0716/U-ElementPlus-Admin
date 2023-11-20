@@ -1,0 +1,15 @@
+{
+  "name": "mock",
+  "private": true,
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=16.0"
+  },
+  "type": "commonjs",
+  "scripts": {},
+  "devDependencies": {
+    "@faker-js/faker": "^8.2.0",
+    "mockjs": "^1.1.0",
+    "vite-plugin-mock-dev-server": "^1.3.4"
+  }
+}

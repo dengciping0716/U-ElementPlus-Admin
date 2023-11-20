@@ -1,0 +1,41 @@
+// import dark theme
+@use 'element-plus/theme-chalk/src/dark/css-vars.scss' as *;
+@use 'element-plus/theme-chalk/src/mixins/mixins.scss' as *;
+@use 'element-plus/theme-chalk/src/index.scss' as *;
+// @use 'element-plus/theme-chalk/src/message.scss' as *;
+// @use 'element-plus/theme-chalk/src/message-box.scss' as *;
+// @use 'element-plus/theme-chalk/src/loading.scss' as *;
+@use './element/default' as *;
+@use './reset' as *;
+@use './default' as *;
+
+html,
+body {
+  background-color: getCssVar('fill-color');
+  width: 100%;
+  height: 100%;
+  overflow: visible !important;
+  overflow-x: hidden !important;
+
+  &.color-weak {
+    filter: invert(80%);
+  }
+
+  &.gray-mode {
+    filter: grayscale(100%);
+    filter: progid:dximagetransform.microsoft.basicimage(grayscale=1);
+  }
+}
+
+#app,
+#app:fullscreen,
+.fullscreen:fullscreen {
+  background-color: getCssVar('fill-color-light');
+}
+
+code {
+  border-radius: 2px;
+  padding: 2px 4px;
+  background-color: getCssVar('color-primary', 'light-9');
+  color: getCssVar('color-primary');
+}

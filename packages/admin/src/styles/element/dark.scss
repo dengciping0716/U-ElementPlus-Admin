@@ -1,0 +1,20 @@
+// only scss variables
+@use 'sass:math';
+@use 'sass:map';
+
+$--colors: (
+  'primary': (
+    'base': #1261eb,
+  ),
+);
+
+$--bg-color: (
+  'page': #000,
+  '': rgb(4, 4, 28),
+  'overlay': #211f1f,
+);
+
+@forward 'element-plus/theme-chalk/src/dark/var.scss' with (
+  $colors: $--colors,
+  $bg-color: $--bg-color, 
+);

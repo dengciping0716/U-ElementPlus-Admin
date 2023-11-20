@@ -1,0 +1,11 @@
+{
+  "result": {
+    "roleId": "1668546007225769986",
+    "roleName": "系统管理员",
+    "effectiveStartDate": "2023-07-01",
+    "effectiveEndDate": "2023-07-01",
+    "isUse": "1"
+  },
+  "resultCode": "200",
+  "resultMsg": "处理成功"
+}

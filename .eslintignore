@@ -1,0 +1,8 @@
+/build/
+/config/
+/dist/
+/*.js
+/static/
+/.history/
+/src/font/
+/src/module/print/

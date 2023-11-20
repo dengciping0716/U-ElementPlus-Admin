@@ -1,0 +1,24 @@
+{
+  "result": {
+    "totalCount": 3,
+    "pageData": [
+      {
+        "dictId": "DICT0001",
+        "dictGrp": "IS_USE",
+        "dictGrpName": "是否启用"
+      },
+      {
+        "dictId": "DICT0003",
+        "dictGrp": "SEX",
+        "dictGrpName": "性别"
+      },
+      {
+        "dictId": "DICT0005",
+        "dictGrp": "ASK_LEAVE_TYPE",
+        "dictGrpName": "请假类型"
+      }
+    ]
+  },
+  "resultCode": "200",
+  "resultMsg": "处理成功"
+}

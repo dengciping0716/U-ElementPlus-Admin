@@ -1,0 +1,49 @@
+@use 'element-plus/theme-chalk/src/mixins/mixins.scss' as *;
+
+i {
+  display: inline-block;
+}
+
+.m-page {
+  // 页面统一间距
+  --uno-apply: w-full p-5 relative min-w-[960px];
+}
+.m-page-split {
+  // 左右分栏页面需要固定高度
+  height: var(--page-height);
+  --uno-apply: flex gap-5;
+}
+//
+.m-edit-page {
+  .el-form--inline .el-form-item {
+    margin-right: unset;
+  }
+}
+
+.list-item {
+  --uno-apply: flex items-center justify-between py-1 px-2 w-full;
+}
+.form-btns {
+  --uno-apply: flex justify-center;
+}
+
+// 按钮权限提示浮层
+.message-oauth-wrap {
+  &:hover .message-oauth {
+    top: 88px;
+  }
+  .message-oauth {
+    position: fixed;
+    padding: 20px;
+    top: -20%;
+    left: 40%;
+    color: #fcac0b;
+    font-size: 14px;
+    border-radius: 4px;
+    z-index: 9999;
+    background-color: #fff7e8;
+    border: 1px solid #feefd0;
+    box-shadow: 0 0px 4px #feefd0;
+    transition: top 0.3s;
+  }
+}

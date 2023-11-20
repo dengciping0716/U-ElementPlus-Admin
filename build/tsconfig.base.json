@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "allowJs": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "lib": ["es6", "ESNext", "dom"],
+    "types": ["vite/client"],
+    "noImplicitAny": false, //不允许使用any
+    // "strictNullChecks": true, //不允许使用null
+    "noImplicitThis": true //不允许往this上面挂属性
+  },
+  "vueCompilerOptions": {
+    "target": 3
+  },
+  "exclude": ["node_modules", "dist"]
+}

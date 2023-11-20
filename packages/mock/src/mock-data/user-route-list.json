@@ -1,0 +1,14 @@
+[
+  {
+    "label": "系统设置",
+    "menuCode": "sys:setting",
+    "sort": 99,
+    "children": [
+      { "label": "参数配置", "menuCode": "sys:setting:properties", "sort": 0 },
+      { "label": "数据字典", "menuCode": "sys:setting:dict", "sort": 0 }
+    ],
+    "perm": ["ALL"]
+  },
+  { "label": "组织机构", "menuCode": "sys:organize", "sort": 1, "perm": ["EDIT", "DEL"] },
+  { "label": "用户管理", "menuCode": "sys:user", "sort": 2, "perm": ["EDIT"] }
+]
