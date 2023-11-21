@@ -1,5 +1,5 @@
 import * as echarts from 'echarts';
-import { debounce } from 'lodash';
+import { debounce } from 'lodash-es';
 import { useEventListener } from '@vueuse/core';
 import { debounceFilter } from '@vueuse/core';
 import { Ref } from 'vue';

@@ -1,7 +1,7 @@
 import { useEventListener } from '@vueuse/core';
 import { useDesignStore } from '@/store/designStore';
 import { useTabsStore } from '@common/core';
-import { debounce } from 'lodash';
+import { debounce } from 'lodash-es';
 
 const headerHeightRef = ref(0);
 const footerHeightRef = ref(0);

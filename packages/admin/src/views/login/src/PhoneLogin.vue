@@ -8,7 +8,7 @@
     label-width="0"
     label-position="left">
     <el-form-item prop="telephone">
-      <el-input v-focus placeholder="请输入手机号" v-model="formVal.telephone"></el-input>
+      <el-input placeholder="请输入手机号" v-model="formVal.telephone"></el-input>
     </el-form-item>
     <el-form-item prop="telVerifyCode">
       <el-input v-model="formVal.telVerifyCode" maxlength="4" placeholder="请输入验证码">

@@ -1,4 +1,4 @@
-import { isObject, isFunction } from 'lodash';
+import { isObject, isFunction } from 'lodash-es';
 export { isFunction };
 
 export function isString(p: any): p is string {

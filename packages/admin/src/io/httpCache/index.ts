@@ -1,6 +1,6 @@
 import { LRUCache } from 'lru-cache';
 import md5 from 'md5';
-import { cloneDeep, omit } from 'lodash';
+import { cloneDeep, omit } from 'lodash-es';
 /**
  * http 缓存策略。使用LRU 缓存实现最近最少使用淘汰机制。
  */

@@ -1,4 +1,4 @@
-import { debounce } from 'lodash';
+import { debounce } from 'lodash-es';
 import bus from '@common/utils/bus';
 
 import { useUserStore } from '@/store/userStore';

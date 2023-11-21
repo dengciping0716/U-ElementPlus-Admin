@@ -1,5 +1,5 @@
 import { computed, toRaw, unref } from 'vue';
-import { isNil, uniqBy } from 'lodash';
+import { isNil, uniqBy } from 'lodash-es';
 import { useTabsStore } from '@common/core';
 import { useRouter } from 'vue-router';
 import type { RouteRecordRaw, RouteRecordName } from 'vue-router';

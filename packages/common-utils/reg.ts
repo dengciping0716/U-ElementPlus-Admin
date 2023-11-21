@@ -1,4 +1,4 @@
-import { isNull } from 'lodash';
+import { isNull } from 'lodash-es';
 // 邮箱
 const emailReg = /^[.a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
 export { emailReg };

@@ -1,5 +1,5 @@
 import { onMounted, onUnmounted } from 'vue';
-import { throttle } from 'lodash';
+import { throttle } from 'lodash-es';
 
 /**
   大屏适配的 hooks

@@ -1,12 +1,12 @@
 {
-  "name": "concrete-cloud-admin",
+  "name": "admin",
   "private": true,
   "version": "0.0.1",
   "engines": {
     "node": ">=16.0"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --force",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx,.vue src",
@@ -28,7 +28,7 @@
     "demo": "workspace:*",
     "echarts": "^5.4.3",
     "element-plus": "^2.4.2",
-    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
     "lru-cache": "^9.1.2",
     "md5": "^2.3.0",
     "pinia": "^2.1.7",

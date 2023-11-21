@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { pick } from 'lodash';
+import { pick } from 'lodash-es';
 const emit = defineEmits(['update:modelValue']);
 const props = defineProps<{ system: any; modelValue?: string[] | null }>();
 const systemName = computed(() => props.system?.systemName);

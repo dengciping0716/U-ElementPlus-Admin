@@ -6,7 +6,7 @@ import router from '@/router';
 import { RouteRecordRaw } from 'vue-router';
 
 import type { Menu } from '../layout/types';
-import { isNil } from 'lodash';
+import { isNil } from 'lodash-es';
 
 import demoPage from 'demo/src/router';
 

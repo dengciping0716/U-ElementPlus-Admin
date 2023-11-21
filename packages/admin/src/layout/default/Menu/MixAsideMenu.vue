@@ -35,7 +35,7 @@
 import type { Menu } from '@/layout/types';
 import { BasicMenu } from '../Menu';
 import { basicProps } from './props';
-import { debounce } from 'lodash';
+import { debounce } from 'lodash-es';
 const props = defineProps(basicProps);
 const appName = import.meta.env.VITE_GLOB_APP_TITLE;
 const route = useRoute();

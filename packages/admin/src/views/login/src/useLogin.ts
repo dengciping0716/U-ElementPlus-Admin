@@ -1,4 +1,4 @@
-import { omit, get } from 'lodash';
+import { omit, get } from 'lodash-es';
 import md5 from 'md5';
 import { useUserStore } from '@/store/userStore';
 import { useMenuStore } from '@/store/menuStore';

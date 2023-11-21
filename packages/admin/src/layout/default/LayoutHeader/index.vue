@@ -10,7 +10,7 @@ import ResetPassword from '@/views/login/resetPassword.vue';
 import SettingDrawer from '../setting/SettingDrawer.vue';
 import { MenuModeEnum, MenuTypeEnum, TriggerEnum } from '@/layout/enum';
 import { BasicMenu } from '../Menu';
-import { omit } from 'lodash';
+import { omit } from 'lodash-es';
 
 const props = defineProps<{
   showLogo?: boolean;

@@ -12,7 +12,7 @@
 <script setup>
 import { ref, h } from 'vue';
 import { useTabsStore } from './useTabsStore';
-import { isFunction } from 'lodash';
+import { isFunction } from 'lodash-es';
 
 const tabsViewStore = useTabsStore();
 

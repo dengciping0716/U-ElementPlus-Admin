@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import { ElNotification } from 'element-plus';
 import DictListItem from './DictListItem.vue';
-import { sortBy } from 'lodash';
+import { sortBy } from 'lodash-es';
 
 import { useDictApi, DictModel } from './useDictApi';
 const { queryDictList } = useDictApi();

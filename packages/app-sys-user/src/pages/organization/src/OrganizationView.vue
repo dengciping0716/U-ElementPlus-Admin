@@ -37,7 +37,7 @@
 
 <script setup lang="ts">
 import EditDialog from './editDialog.vue';
-import { debounce, omit } from 'lodash';
+import { debounce, omit } from 'lodash-es';
 import type Node from 'element-plus/es/components/tree/src/model/node';
 import { ElTree, ElMessage } from 'element-plus';
 import { useOrganizationApi } from '..';

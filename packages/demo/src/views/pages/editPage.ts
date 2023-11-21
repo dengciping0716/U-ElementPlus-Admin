@@ -1,5 +1,5 @@
 import { landlineReg, phoneReg, emailValid, bankCardValid, phoneValid } from '@common/utils/reg';
-import { isNull, map } from 'lodash';
+import { isNull, map } from 'lodash-es';
 
 export const formModel = {
   empCode: '', // 账号

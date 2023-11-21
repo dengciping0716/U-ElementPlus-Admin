@@ -1,14 +1,14 @@
 {
-  "name": "concrete-cloud",
+  "name": "u-element-admin",
   "private": true,
   "version": "0.0.1",
   "engines": {
     "node": ">=16.0"
   },
   "scripts": {
-    "dev": "pnpm -F concrete-cloud-admin run dev",
-    "build": "pnpm -F concrete-cloud-admin run build",
-    "preview": "pnpm -F concrete-cloud-admin run preview",
+    "dev": "pnpm -F  admin run dev",
+    "build": "pnpm -F  admin run build",
+    "preview": "pnpm -F  admin run preview",
     "postinstall": "husky install",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx,.vue src",
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx,.vue src --fix",

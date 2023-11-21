@@ -38,7 +38,7 @@
  * 表格设置显示字段弹窗组件
  */
 import draggable from 'vuedraggable';
-import { groupBy } from 'lodash';
+import { groupBy } from 'lodash-es';
 
 const DEFAULT_META = { visible: true, typeName: '常规字段' };
 

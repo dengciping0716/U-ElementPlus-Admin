@@ -42,6 +42,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
         },
       },
     },
+    preview: { https: true },
     server: { host: true, port: VITE_PORT, https: true, proxy: { '^/mock': 'http://example.com/', ...createProxy(VITE_PROXY) } },
     plugins: createVitePlugins(viteEnv, isBuild),
     define: {
@@ -81,7 +82,18 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
       },
     },
     optimizeDeps: {
-      include: ['dayjs/locale/en', 'dayjs/locale/zh-cn', 'lodash'],
+      include: [
+        '@element-plus/icons-vue',
+        'pinia', //
+        'axios', //
+        'vue-router', //
+        '@vueuse/core', //
+        'dayjs/locale/en',
+        'dayjs/locale/zh-cn',
+        'lodash-es',
+        '@common/utils/index',
+        '@common/core/index'
+      ],
     },
   };
 });

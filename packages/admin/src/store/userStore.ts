@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 import { nextTick } from 'vue';
-import { omit, get } from 'lodash';
+import { omit, get } from 'lodash-es';
 
 let loopId: NodeJS.Timeout | null;
 interface AuthInfo {

@@ -5,7 +5,7 @@ import { ref, unref, ComputedRef, computed, onMounted, watch, reactive, Ref, wat
 import type { BasicTableProps, TableActionType, FetchParams } from '../BasicTable';
 import type { PageInfoType } from '../../index';
 import { isFunction, buildUUID } from '@common/utils';
-import { get, cloneDeep, merge, debounce } from 'lodash';
+import { get, cloneDeep, merge, debounce } from 'lodash-es';
 import { useTimeoutFn } from '@vueuse/core';
 export const ROW_KEY = 'key';
 

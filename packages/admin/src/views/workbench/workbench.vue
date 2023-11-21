@@ -95,7 +95,7 @@
 </template>
 
 <script setup lang="ts">
-import { merge } from 'lodash';
+import { merge } from 'lodash-es';
 import { useEchart, stackBarHorizontal, pie } from '@common/utils/chart';
 const appName = import.meta.env.VITE_GLOB_APP_TITLE;
 

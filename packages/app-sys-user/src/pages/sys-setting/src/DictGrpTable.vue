@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import { BasicTable, useTable } from '@common/core';
-import { debounce } from 'lodash';
+import { debounce } from 'lodash-es';
 import { ElNotification } from 'element-plus';
 
 import { useDictApi } from './useDictApi';

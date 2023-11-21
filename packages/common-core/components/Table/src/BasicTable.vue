@@ -69,11 +69,11 @@ import { createTableContext } from './hooks/useTableContext';
 import { useColumns } from './hooks/useColumns';
 import { usePage } from '../index';
 import { useDataSource } from './hooks/useDataSource';
-import { omit } from 'lodash';
+import { omit } from 'lodash-es';
 import ColumnsSettingDialogVue from './ColumnsSettingDialog.vue';
 
 import type { TableInstance, TableProps } from 'element-plus/es';
-import { isNil } from 'lodash';
+import { isNil } from 'lodash-es';
 
 const emit = defineEmits<BasicTableEmits>();
 

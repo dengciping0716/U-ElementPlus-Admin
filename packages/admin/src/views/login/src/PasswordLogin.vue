@@ -2,7 +2,7 @@
   <!-- 密码登录 -->
   <el-form ref="formLogin" :model="formVal" @keyup.native.enter="login()" :rules="formRules" label-width="0" label-position="top">
     <el-form-item label="" prop="username">
-      <el-input v-focus ref="inputUserName" placeholder="请输入手机号" v-model="formVal.username"></el-input>
+      <el-input ref="inputUserName" placeholder="请输入手机号" v-model="formVal.username"></el-input>
     </el-form-item>
     <el-form-item label="" prop="password">
       <el-input v-model="formVal.password" placeholder="请输入密码" show-password></el-input>
