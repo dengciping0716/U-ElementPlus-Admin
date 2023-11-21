@@ -42,8 +42,15 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
         },
       },
     },
-    preview: { https: true },
-    server: { host: true, port: VITE_PORT, https: true, proxy: { '^/mock': 'http://example.com/', ...createProxy(VITE_PROXY) } },
+    server: {
+      host: true,
+      port: VITE_PORT,
+      warmup: {
+        clientFiles: ['../common-core/components/**/*.vue','../common-core/components/**/*.ts', '../common-utils/*.ts'],
+        // ssrFiles: ['./src/server/modules/*.js'],
+      },
+      proxy: { '^/mock': 'http://example.com/', ...createProxy(VITE_PROXY) },
+    },
     plugins: createVitePlugins(viteEnv, isBuild),
     define: {
       // setting vue-i18-next
@@ -91,8 +98,6 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
         'dayjs/locale/en',
         'dayjs/locale/zh-cn',
         'lodash-es',
-        '@common/utils/index',
-        '@common/core/index'
       ],
     },
   };
