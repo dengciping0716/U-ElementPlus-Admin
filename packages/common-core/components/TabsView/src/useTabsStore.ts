@@ -1,23 +1,24 @@
 import { defineStore } from 'pinia';
 import { ElMessage } from 'element-plus';
 import { nextTick } from 'vue';
-// import { RouteLocationNormalized } from 'vue-router';
+import type { RouteLocationNormalized } from 'vue-router';
 // 不需要出现在标签页中的路由
 const whiteList = ['Redirect', 'Login', '404', '403', '500'];
 
-// export type RouteItem = Partial<RouteLocationNormalized> & {
-//   fullPath: string;
-//   path: string;
-//   name: string;
-//   hash: string;
-//   meta: object;
-//   params: object;
-//   query: object;
-// };
+export type RouteItem = Partial<RouteLocationNormalized> & {
+  fullPath: string;
+  path: string;
+  name: string;
+  hash: string;
+  meta: object;
+  params: object;
+  query: object;
+};
 
-// export type ITabsViewState = {
-//   tabsList: RouteItem[]; // 标签页
-// };
+export type ITabsViewState = {
+  tabsList: RouteItem[]; // 标签页
+  activeKey: String | null;
+};
 
 //保留固定路由
 function retainAffixRoute(list) {
@@ -31,22 +32,22 @@ const getSimpleRoute = (route) => {
 };
 
 export const useTabsStore = defineStore('app-tabs-view', {
-  state: () => ({
+  state: (): ITabsViewState => ({
     tabsList: [],
     activeKey: '',
   }),
   getters: {
-    keys() {
-      return this.tabsList.map((item) => item.fullPath);
+    keys(state: ITabsViewState) {
+      return state.tabsList.map((item) => item.fullPath);
     },
     // 最后一个tab
-    last() {
-      const currentRoute = this.tabsList[Math.max(0, this.tabsList.length - 1)];
+    last(state: ITabsViewState): RouteItem {
+      const currentRoute = state.tabsList[Math.max(0, state.tabsList.length - 1)];
       return currentRoute;
     },
-    activedTab() {
-      const currentRoute = this.tabsList.find((route) => route.fullPath == this.activeKey);
-      return currentRoute;
+    activedTab(state: ITabsViewState): RouteItem {
+      const currentRoute = state.tabsList.find((route) => route.fullPath == state.activeKey);
+      return currentRoute!;
     },
   },
   actions: {
@@ -72,7 +73,7 @@ export const useTabsStore = defineStore('app-tabs-view', {
       }
       if (this.activeKey == route.fullPath) {
         let nextRoute = this.next(route.fullPath);
-        nextTick(() => this.router.push(nextRoute));
+        nextTick(() => this.router.push(nextRoute as RouteLocationNormalized));
       }
       this.closeCurrentTab(route);
     },

@@ -30,18 +30,18 @@ export function usePageContext() {
   );
 
   //
-  const { updateTab, removeTab, closeCurrentTab } = useTabsStore();
-
-  //
   const designStore = useDesignStore();
+  //
+  const tabsStore = useTabsStore();
+
   const router = useRouter();
   function back() {
     const route = unref(router.currentRoute);
     router.back();
     if (designStore.isShowMultipleTab) {
-      setTimeout(() => closeCurrentTab(route), 300);
+      setTimeout(() => tabsStore.closeCurrentTab(route), 300);
     }
   }
 
-  return { pageHeight, updateTab, closeCurrentTab, back };
+  return { pageHeight, updateTab: tabsStore.updateTab, closeCurrentTab: tabsStore.closeCurrentTab, back };
 }

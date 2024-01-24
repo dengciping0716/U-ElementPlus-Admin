@@ -37,13 +37,12 @@ async function appInit() {
   setupDirectives(app);
   // 挂载状态管理
   setupStore(app);
+  await initStore();
+  app.use(okui);
   //加载子模块
   registerPackage(app, router);
-  await initStore();
   // 挂载路由
   setupRouter(app);
-  app.use(okui);
-
   // 路由准备就绪后挂载APP实例
   await router.isReady();
 

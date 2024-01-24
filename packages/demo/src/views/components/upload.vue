@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import { mUpload } from '@common/core';
-import { UploadUserFile } from 'element-plus';
+import type { UploadUserFile } from 'element-plus';
 
 const fileList = ref<UploadUserFile[]>([
   {

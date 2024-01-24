@@ -1,4 +1,4 @@
-import { App } from 'vue';
+import type { App } from 'vue';
 import noDataTip from './noDataTip';
 /**
  * 注册全局自定义指令

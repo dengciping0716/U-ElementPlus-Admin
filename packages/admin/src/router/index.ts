@@ -1,5 +1,6 @@
 import type { App } from 'vue';
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router';
 import { createRouterGuards } from './router-guards';
 import { LAYOUT, HttpErrorPage, RedirectRoute, ReloadRoute, ErrorPageRoute } from './base';
 import pages, { LoginRoute } from './pages';
@@ -29,7 +30,7 @@ const RootRoute: Array<RouteRecordRaw> = [
     redirect: '/workbench',
     component: LAYOUT,
     meta: {
-      icon:'i-ep-home-filled'
+      icon: 'i-ep-home-filled',
     },
     children: [...HttpErrorPage, ...pages],
   },
@@ -38,7 +39,7 @@ const RootRoute: Array<RouteRecordRaw> = [
 export const constantRouter: any[] = [...RootRoute, RedirectRoute, ReloadRoute, ErrorPageRoute, LoginRoute];
 
 const router = createRouter({
-  history: createWebHashHistory(''),
+  history: createWebHistory('/'),
   routes: constantRouter,
   strict: true,
 });

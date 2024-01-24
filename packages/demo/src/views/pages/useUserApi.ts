@@ -1,4 +1,5 @@
-import { formModel, FormModel, rules } from './editPage';
+import type { FormModel } from './editPage';
+import { formModel, rules } from './editPage';
 
 export const useUserApi = function () {
   const loading = ref(false);

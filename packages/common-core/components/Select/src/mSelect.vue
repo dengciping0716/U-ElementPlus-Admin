@@ -1,5 +1,5 @@
 <template>
-  <el-select v-bind="$attrs"  :remoteMethod="remoteSearch" :remote-show-suffix="true" @visible-change="visibleChange" @change="valueChange">
+  <el-select v-bind="$attrs" :remoteMethod="remoteSearch" :remote-show-suffix="true" @visible-change="visibleChange" @change="valueChange">
     <template #prefix v-if="loading || $attrs.prefix">
       <i :i="loading ? 'ep-loading' : $attrs.prefix" class="el-icon el-input__icon important-ml-0"></i>
     </template>
@@ -41,8 +41,10 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { useHistory, HistoryProps } from '../../../hooks/useHistory';
-import { useLazyLoad, LazyProps } from '../../../hooks/useLazyLoad';
+import { useHistory } from '../../../hooks/useHistory';
+import type { HistoryProps } from '../../../hooks/useHistory';
+import { useLazyLoad } from '../../../hooks/useLazyLoad';
+import type { LazyProps } from '../../../hooks/useLazyLoad';
 
 const props = defineProps<{ options?: any[]; tableColumns?: any[]; props?: LazyProps<any> } & HistoryProps>();
 const { loading, options, valueKey, labelKey, remoteSearch } = useLazyLoad(props.props);

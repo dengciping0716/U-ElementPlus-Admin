@@ -2,7 +2,7 @@ import * as echarts from 'echarts';
 import { debounce } from 'lodash-es';
 import { useEventListener } from '@vueuse/core';
 import { debounceFilter } from '@vueuse/core';
-import { Ref } from 'vue';
+import type { Ref } from 'vue';
 export { stackBarHorizontal } from './source/bar';
 export { pie } from './source/pie';
 

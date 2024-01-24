@@ -1,6 +1,6 @@
 // @unocss-include
 
-import { RouteRecordRaw } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router';
 const IFrame = () => import('@/layout/iframe/FrameBlank.vue');
 
 // 菜单menuCode 和 路由的name 去匹配

@@ -69,7 +69,8 @@
 <script setup lang="ts">
 import { BasicTable, useTable } from '@common/core';
 import { ElMessageBox, ElNotification } from 'element-plus';
-import { RoleModel, useRoleApi } from './useRoleApi';
+import type { RoleModel } from './useRoleApi';
+import { useRoleApi } from './useRoleApi';
 import RoleEdit from './RoleEdit.vue';
 const props = defineProps<{
   organizeId?: string;

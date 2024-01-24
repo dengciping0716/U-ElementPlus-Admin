@@ -88,8 +88,10 @@
 
 <script setup lang="ts">
 import { mPageHeader } from '@common/core';
-import { FormInstance, ElMessage } from 'element-plus';
-import { formModel, FormModel, rules } from './editPage';
+import type { FormInstance } from 'element-plus';
+import { ElMessage } from 'element-plus';
+import type { FormModel } from './editPage';
+import { formModel, rules } from './editPage';
 import { useUserApi } from './useUserApi';
 import { useTabsStore } from '@common/core';
 //

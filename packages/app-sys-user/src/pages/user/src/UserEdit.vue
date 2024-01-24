@@ -27,7 +27,8 @@
     </el-form-item>
 
     <el-form-item label="岗位" prop="roleId">
-      <m-checkbox v-model="formModel.roleId" placeholder="请选择岗位" filterable :options="roleOptions" multiple :props="roleProps"> </m-checkbox>
+      <m-checkbox v-model="formModel.roleId" placeholder="请选择岗位" filterable :options="roleOptions" multiple :props="roleProps">
+      </m-checkbox>
     </el-form-item>
 
     <div class="flex justify-center">
@@ -39,7 +40,8 @@
 </template>
 
 <script setup lang="ts">
-import { FormInstance, ElMessage } from 'element-plus';
+import type { FormInstance } from 'element-plus';
+import { ElMessage } from 'element-plus';
 import { useUserApi } from './useUserApi';
 import { ElMessageBox, ElNotification } from 'element-plus';
 import { useRoleApi } from '../../role';
@@ -50,7 +52,7 @@ const emit = defineEmits<{
   del: [value: string];
 }>();
 
-const props = defineProps<{ id?: string; params?: any; organizeId?: string; }>();
+const props = defineProps<{ id?: string; params?: any; organizeId?: string }>();
 const { loading, formModel, queryInfo, submit, del } = useUserApi();
 
 const formRef = ref<FormInstance>();

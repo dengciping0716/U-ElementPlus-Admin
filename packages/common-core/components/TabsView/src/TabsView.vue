@@ -66,7 +66,7 @@
 </template>
 
 <!--  -->
-<script setup>
+<script setup lang="ts">
 import { useFullscreen } from '@vueuse/core';
 import elementResizeDetectorMaker from 'element-resize-detector';
 import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router';
@@ -109,35 +109,35 @@ let { scrollable, dropdownX, dropdownY, showDropdown } = toRefs(state);
 // 标签页列表
 const tabsList = computed(() => tabsViewStore.tabsList);
 
-const navScroll = ref(null);
-const navWrap = ref(null);
+const navScroll = ref<Nullable<HTMLDivElement>>(null);
+const navWrap = ref<Nullable<HTMLDivElement>>(null);
 
 /**
  * @param value 要滚动到的位置
  * @param amplitude 每次滚动的长度
  */
 function scrollTo(value, amplitude) {
-  const currentScroll = navScroll.value.scrollLeft;
+  const currentScroll = navScroll.value?.scrollLeft;
   const scrollWidth =
     (amplitude > 0 && currentScroll + amplitude >= value) || (amplitude < 0 && currentScroll + amplitude <= value)
       ? value
       : currentScroll + amplitude;
-  navScroll.value && navScroll.value.scrollTo(scrollWidth, 0);
+  navScroll.value && navScroll.value?.scrollTo(scrollWidth, 0);
   if (scrollWidth === value) return;
   return window.requestAnimationFrame(() => scrollTo(value, amplitude));
 }
 
 function scrollPrev() {
-  const containerWidth = navScroll.value.offsetWidth;
-  const currentScroll = navScroll.value.scrollLeft;
+  const containerWidth = navScroll.value?.offsetWidth || 0;
+  const currentScroll = navScroll.value?.scrollLeft || 0;
   if (!currentScroll) return;
   const scrollLeft = currentScroll > containerWidth ? currentScroll - containerWidth : 0;
   scrollTo(scrollLeft, (scrollLeft - currentScroll) / 20);
 }
 function scrollNext() {
-  const containerWidth = navScroll.value.offsetWidth;
-  const navWidth = navScroll.value.scrollWidth;
-  const currentScroll = navScroll.value.scrollLeft;
+  const containerWidth = navScroll.value?.offsetWidth || 0;
+  const navWidth = navScroll.value?.scrollWidth || 0;
+  const currentScroll = navScroll.value?.scrollLeft || 0;
   if (navWidth - currentScroll <= containerWidth) return;
   const scrollLeft = navWidth - currentScroll > containerWidth * 2 ? currentScroll + containerWidth : navWidth - containerWidth;
   scrollTo(scrollLeft, (scrollLeft - currentScroll) / 20);
@@ -146,15 +146,15 @@ function scrollNext() {
 /**
  * @param autoScroll 是否开启自动滚动功能
  */
-async function updateNavScroll(autoScroll) {
+async function updateNavScroll(autoScroll = false) {
   await nextTick();
   if (!navScroll.value) return;
-  const containerWidth = navScroll.value.offsetWidth;
-  const navWidth = navScroll.value.scrollWidth;
+  const containerWidth = navScroll.value?.offsetWidth;
+  const navWidth = navScroll.value?.scrollWidth;
   if (containerWidth < navWidth) {
     state.scrollable = true;
     if (autoScroll) {
-      let tagList = navScroll.value.querySelectorAll('.tabs-card-scroll-item') || [];
+      let tagList = navScroll.value?.querySelectorAll('.tabs-card-scroll-item') || [];
       [...tagList].forEach((tag) => {
         // fix SyntaxError
         if (tag.id === `tag${tabsViewStore.activeKey?.split('/').join('\/')}`) {

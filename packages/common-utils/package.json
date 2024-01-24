@@ -11,26 +11,30 @@
     "fix-memory-limit": "cross-env LIMIT=4096 increase-memory-limit"
   },
   "dependencies": {
-    "@vue/shared": "^3.3.8",
-    "@vueuse/core": "^10.6.0",
     "browser-image-compression": "^2.0.2",
     "color": "^4.2.3",
     "crypto-js": "^4.2.0",
-    "dayjs": "^1.11.10",
     "echarts": "^5.4.3",
     "localforage": "^1.10.0",
-    "lodash-es": "^4.17.21",
     "lru-cache": "^9.1.2",
     "mitt": "^3.0.1",
-    "vue": "^3.3.8",
-    "vue-router": "^4.2.5",
     "vue3-lazyload": "^0.3.8"
   },
   "devDependencies": {
     "@types/color": "^3.0.6",
-    "@types/crypto-js": "^4.2.1",
-    "@types/lodash": "^4.14.201",
-    "@types/node": "^18.18.9",
+    "@types/crypto-js": "^4.2.2",
+    "@types/lodash": "^4.14.202",
+    "@types/node": "^18.19.9",
     "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "@vue/shared": "^3.4.15",
+    "@vueuse/core": "^10.7.2",
+    "dayjs": "^1.11.10",
+    "element-plus": "^2.5.2",
+    "lodash-es": "^4.17.21",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5"
   }
 }

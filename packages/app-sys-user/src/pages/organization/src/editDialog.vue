@@ -23,9 +23,11 @@
 
 <script setup lang="ts">
 import type Node from 'element-plus/es/components/tree/src/model/node';
+import type { FormInstance } from 'element-plus';
 
-import { FormInstance, ElMessage } from 'element-plus';
-import { useOrganizationApi, OrganizationModel } from './useOrganizationApi';
+import { ElMessage } from 'element-plus';
+import { useOrganizationApi } from './useOrganizationApi';
+import type { OrganizationModel } from './useOrganizationApi';
 const { submit, loading, formModel } = useOrganizationApi();
 const rules = {
   organizeName: [{ required: true, message: '请输入组织名称', trigger: 'blur' }],
@@ -50,7 +52,7 @@ function show(node: Node, type = 'add') {
       organizeName: '',
       parentName: node.label,
       parentId: node.key as string,
-      organizeId:'',
+      organizeId: '',
     };
   } else {
     formModel.value = {

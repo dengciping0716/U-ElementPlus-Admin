@@ -64,7 +64,7 @@
 </template>
 
 <script setup lang="ts">
-import { BasicTableProps, TableActionType, BasicTableEmits } from './BasicTable';
+import type { BasicTableProps, TableActionType, BasicTableEmits } from './BasicTable';
 import { createTableContext } from './hooks/useTableContext';
 import { useColumns } from './hooks/useColumns';
 import { usePage } from '../index';

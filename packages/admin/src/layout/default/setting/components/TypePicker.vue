@@ -19,7 +19,7 @@
 </template>
 <!--  -->
 <script lang="ts" setup>
-import { PropType } from 'vue';
+import type { PropType } from 'vue';
 
 import { menuTypeList } from '@/layout/enum';
 const prefixCls = 'setting-menu-type-picker';

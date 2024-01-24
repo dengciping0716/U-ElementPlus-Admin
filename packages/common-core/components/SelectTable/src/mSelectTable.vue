@@ -3,7 +3,8 @@
  * 带可选行功能的表格，可单选、多选
  */
 
-import { BasicTable, useTable, TableColumnProps } from '../../Table';
+import type { TableColumnProps } from '../../Table';
+import { BasicTable, useTable } from '../../Table';
 import { nextTick } from 'vue';
 import type { mSelectTableEmits, mSelectTableProps } from './mSelectTable';
 
@@ -19,7 +20,7 @@ const { multiple = false, tableColumns, lazyLoad } = toRefs(props);
 const [registerTable, { getTableEl, reload, getDataSource, setTargetPage, setPagination }] = useTable({
   showPage: true,
   immediate: true,
-  border:true,
+  border: true,
   api: lazyLoad,
   tableColumns,
 });
@@ -85,7 +86,6 @@ defineExpose({ checkSelect, doSearch, getDataSource });
     @row-click="rowClick"
     @select="onSelect"
     @select-all="onSelectAll">
-
     <template #toolBar>
       <slot name="search"></slot>
 

@@ -3,7 +3,7 @@
  * @returns
  */
 import { reactive, toRefs } from 'vue';
-import { PaginationProps } from 'element-plus';
+import type { PaginationProps } from 'element-plus';
 
 export type PaginationPositon = 'topLeft' | 'topCenter' | 'topRight' | 'bottomLeft' | 'bottomCenter' | 'bottomRight';
 

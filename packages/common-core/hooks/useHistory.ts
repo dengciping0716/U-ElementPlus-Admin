@@ -1,5 +1,5 @@
 import { LRUCache } from 'lru-cache';
-import { Ref } from 'vue';
+import type { Ref } from 'vue';
 import { createStorage } from '@common/utils/storage';
 const storage = createStorage({ name: 'history' });
 

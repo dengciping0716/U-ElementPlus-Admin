@@ -1,4 +1,4 @@
-import { Router } from 'vue-router';
+import type { Router } from 'vue-router';
 import { PageEnum } from '@/router/base';
 import { useUserStore } from '@/store/userStore';
 import { usePermissionStore } from '@/store/permission/permissionStore';

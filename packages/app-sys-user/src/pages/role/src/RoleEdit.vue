@@ -28,7 +28,8 @@
 </template>
 
 <script setup lang="ts">
-import { FormInstance, ElMessage } from 'element-plus';
+import type { FormInstance } from 'element-plus';
+import { ElMessage } from 'element-plus';
 import { useRoleApi } from './useRoleApi';
 import datePickerOptions from '@common/utils/datePickerOptions';
 
@@ -58,7 +59,7 @@ const rules = { roleName: [{ required: true, message: '请输岗位名称', trig
 
 /** 提交 */
 async function handlerSubmit() {
-  const valid = await formRef.value?.validate().catch((e) =>false);
+  const valid = await formRef.value?.validate().catch((e) => false);
   if (!valid) return Promise.reject(false);
   return submit().then(() => {
     ElMessage.success('保存成功！');

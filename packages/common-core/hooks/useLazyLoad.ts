@@ -1,5 +1,5 @@
 /** */
-import { Ref } from 'vue';
+import type { Ref } from 'vue';
 
 export interface LazyProps<T> {
   label: string;

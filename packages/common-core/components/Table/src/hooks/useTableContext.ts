@@ -1,11 +1,11 @@
-import type { Ref } from 'vue';
-import type { BasicTableProps, TableActionType , SearchState } from '../BasicTable';
-import { provide, inject, ComputedRef } from 'vue';
+import type { Ref, ComputedRef } from 'vue';
+import type { BasicTableProps, TableActionType, SearchState } from '../BasicTable';
+import { provide, inject } from 'vue';
 
 const key = Symbol('basic-table');
 
 type Instance = TableActionType & {
-  searchState:SearchState;
+  searchState: SearchState;
   wrapRef: Ref<Nullable<HTMLElement>>;
   getBindValues: ComputedRef<Recordable>;
 };

@@ -1,7 +1,8 @@
 /**
  *
  */
-import { ref, unref, ComputedRef, computed, onMounted, watch, reactive, Ref, watchEffect, nextTick } from 'vue';
+import { ref, unref, computed, onMounted, watch, reactive, watchEffect, nextTick } from 'vue';
+import type { ComputedRef, Ref } from 'vue';
 import type { BasicTableProps, TableActionType, FetchParams } from '../BasicTable';
 import type { PageInfoType } from '../../index';
 import { isFunction, buildUUID } from '@common/utils';

@@ -2,7 +2,7 @@ import type { App } from 'vue';
 import { markRaw } from 'vue';
 import { createPinia } from 'pinia';
 import router from '@/router';
-import { Router } from 'vue-router';
+import type { Router } from 'vue-router';
 import savePlugin from './plugin/save';
 
 import { useUserStore } from './userStore';

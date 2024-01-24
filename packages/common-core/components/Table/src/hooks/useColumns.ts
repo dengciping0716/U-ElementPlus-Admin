@@ -1,7 +1,8 @@
 /**
  *
  */
-import { ref, unref, ComputedRef, computed, onMounted, watch, reactive, Ref, watchEffect } from 'vue';
+import { ref, unref, computed, onMounted, watch, reactive, watchEffect } from 'vue';
+import type { ComputedRef, Ref } from 'vue';
 import type { BasicTableProps, TableActionType, TableColumnProps, FetchParams } from '../BasicTable';
 import storage from '@common/utils/storage';
 

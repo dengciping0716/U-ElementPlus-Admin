@@ -9,7 +9,7 @@
   </router-view>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, h } from 'vue';
 import { useTabsStore } from './useTabsStore';
 import { isFunction } from 'lodash-es';

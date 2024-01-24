@@ -38,7 +38,8 @@
 
 <script setup lang="ts">
 import { mPageHeader } from '@common/core';
-import { FormInstance, ElMessage } from 'element-plus';
+import type { FormInstance } from 'element-plus';
+import { ElMessage } from 'element-plus';
 import { useUserApi } from './useUserApi';
 //
 import { usePageContext } from '@/hooks/usePageContext';

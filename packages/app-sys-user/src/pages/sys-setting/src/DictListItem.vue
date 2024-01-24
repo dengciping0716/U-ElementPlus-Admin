@@ -33,9 +33,10 @@
 
 <script setup lang="ts">
 import { ElNotification } from 'element-plus';
-import { FormInstance } from 'element-plus';
+import type { FormInstance } from 'element-plus';
 
-import { useDictApi, DictModel } from './useDictApi';
+import { useDictApi } from './useDictApi';
+import type { DictModel } from './useDictApi';
 
 type Row = Partial<DictModel & { isEdit: boolean }>;
 

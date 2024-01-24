@@ -1,9 +1,9 @@
 import { usePermissionStore } from './permission/permissionStore';
 import { defineStore } from 'pinia';
 import storage from '@common/utils/storage';
-import { RouteLocationRaw, RouteMeta } from 'vue-router';
+import type { RouteLocationRaw, RouteMeta } from 'vue-router';
 import router from '@/router';
-import { RouteRecordRaw } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router';
 
 import type { Menu } from '../layout/types';
 import { isNil } from 'lodash-es';

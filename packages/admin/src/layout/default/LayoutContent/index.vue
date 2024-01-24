@@ -14,11 +14,13 @@ import type { VNode, CSSProperties } from 'vue';
 import { mTabsView, KeepAliveView } from '@common/core';
 import FrameLayout from '../../iframe/index.vue';
 import { useDesignStore } from '@/store/designStore';
+import { useLayoutHeight, usePageContext } from '@/hooks/usePageContext';
+
 const designStore = useDesignStore();
-const { pageHeight } = usePageContext();
 
 // 设置头部高度，计算内容高度
-import { useLayoutHeight, usePageContext } from '@/hooks/usePageContext';
+const { pageHeight } = usePageContext();
+
 const HEADER_HEIGHT = 50;
 const TABS_HEIGHT = 42;
 const { setHeaderHeight } = useLayoutHeight();

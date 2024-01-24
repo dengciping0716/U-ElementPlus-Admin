@@ -4,7 +4,7 @@
  * save:{enabled:true}
  */
 import storageUtil from '@common/utils/storage';
-import { PiniaPluginContext } from 'pinia';
+import type { PiniaPluginContext } from 'pinia';
 
 export interface SaveStrategy {
   key?: string;

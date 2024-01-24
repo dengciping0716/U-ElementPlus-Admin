@@ -1,4 +1,4 @@
-import { App } from 'vue';
+import type { App } from 'vue';
 import VueLazyLoad from 'vue3-lazyload';
 import Image_404 from '@/assets/images/exception/image-404.png';
 import { BtnOauthTip, BtnOauthShow, BtnOauthHide } from '@/store/permission/directive';

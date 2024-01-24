@@ -17,7 +17,8 @@ import { ElNotification } from 'element-plus';
 import DictListItem from './DictListItem.vue';
 import { sortBy } from 'lodash-es';
 
-import { useDictApi, DictModel } from './useDictApi';
+import type { DictModel } from './useDictApi';
+import { useDictApi } from './useDictApi';
 const { queryDictList } = useDictApi();
 
 const props = defineProps<{ dictGrp: string }>();

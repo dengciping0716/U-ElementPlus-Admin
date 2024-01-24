@@ -18,7 +18,8 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { useLazyLoad, LazyProps } from '../../../hooks/useLazyLoad';
+import { useLazyLoad } from '../../../hooks/useLazyLoad';
+import type { LazyProps } from '../../../hooks/useLazyLoad';
 
 const props = defineProps<{ options?: any[]; effect?: 'dark' | 'plain'; props?: LazyProps<any> }>();
 const { loading, options, valueKey, labelKey, remoteSearch } = useLazyLoad(props.props);

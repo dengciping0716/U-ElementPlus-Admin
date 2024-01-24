@@ -41,7 +41,8 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { useHistory, HistoryProps } from '../../../hooks/useHistory';
+import { useHistory } from '../../../hooks/useHistory';
+import type { HistoryProps } from '../../../hooks/useHistory';
 
 const props = defineProps<HistoryProps>();
 const { resetHistory, saveInput } = useHistory(toRef(props.checkNull), props.cacheKey);

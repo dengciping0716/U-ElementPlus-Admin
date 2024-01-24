@@ -37,7 +37,9 @@
     <template #toolBar v-if="organizeCode">
       <el-button text type="primary" icon="ep-plus" @click="editRow()"> <span class="text-black dark:text-white">新增</span></el-button>
       <el-divider direction="vertical" />
-      <el-button text type="primary" icon="ep-top-right" @click="editRow()"> <span class="text-black dark:text-white">导出</span></el-button>
+      <el-button text type="primary" icon="ep-top-right" @click="editRow()">
+        <span class="text-black dark:text-white">导出</span></el-button
+      >
       <el-divider direction="vertical" />
     </template>
 
@@ -81,7 +83,8 @@
 
 <script setup lang="ts">
 import { BasicTable, useTable } from '@common/core';
-import { UserModel, useUserApi } from './useUserApi';
+import type { UserModel } from './useUserApi';
+import { useUserApi } from './useUserApi';
 import { ElMessageBox, ElNotification } from 'element-plus';
 import UserEdit from './UserEdit.vue';
 

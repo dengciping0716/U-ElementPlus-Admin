@@ -5,7 +5,7 @@ export * from './components';
 import { setupDirectives } from './directives';
 import { setupPlugins } from './plugins';
 
-import { App, Plugin } from 'vue';
+import type { App, Plugin } from 'vue';
 //
 import Components from './component';
 

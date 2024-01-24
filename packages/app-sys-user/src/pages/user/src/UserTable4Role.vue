@@ -68,7 +68,8 @@
 
 <script setup lang="ts">
 import { BasicTable, useTable } from '@common/core';
-import { UserModel, useUserApi } from './useUserApi';
+import type { UserModel } from './useUserApi';
+import { useUserApi } from './useUserApi';
 import { ElMessageBox, ElNotification } from 'element-plus';
 import { mPageHeader } from '@common/core';
 import { SelectUserByOrg } from '../../..';

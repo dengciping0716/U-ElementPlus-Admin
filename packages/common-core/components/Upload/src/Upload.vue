@@ -37,7 +37,8 @@
 
 <script setup lang="ts">
 import type { MUploadProps, UploadFile } from './index';
-import { ElImageViewer, UploadInstance, UploadProps, UploadUserFile } from 'element-plus';
+import { ElImageViewer } from 'element-plus';
+import type { UploadInstance, UploadProps, UploadUserFile } from 'element-plus';
 import { useUpload } from './useUpload';
 
 defineOptions({

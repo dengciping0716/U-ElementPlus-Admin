@@ -2,9 +2,9 @@ import { downloadByForm } from '@common/utils/file';
 import { compressImage } from '@common/utils/compressImage';
 import { ElMessage, ElMessageBox } from 'element-plus';
 import type { UploadInstance, UploadProps, UploadUserFile, UploadFile, UploadRawFile, UploadRequestOptions } from 'element-plus';
-import { Ref } from 'vue';
+import type { Ref } from 'vue';
 
-import { MUploadProps } from './index';
+import type { MUploadProps } from './index';
 
 export const useUpload = function (self: Ref<UploadInstance | undefined>, props: MUploadProps) {
   const { appContext } = getCurrentInstance()!;

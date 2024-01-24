@@ -51,7 +51,8 @@
 
 <script setup lang="ts">
 import { h } from 'vue';
-import { BasicTable, FilterBar, useTable, TableColumnProps } from '@common/core';
+import type { TableColumnProps } from '@common/core';
+import { BasicTable, FilterBar, useTable } from '@common/core';
 import { FilterRender, buildInput, buildDate, buildDict } from '@common/core';
 const searchForm = ref<any>(null);
 const searchParams = ref<Record<string, any>>({
